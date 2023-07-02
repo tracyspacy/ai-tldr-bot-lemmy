@@ -50,8 +50,7 @@ if __name__ == "__main__":
     # Log in to huggingface and grant authorization to huggingchat
     sign = Login(email, passwd)
     cookies = sign.login()
-    # Save cookies to usercookies/<email>.json
-    sign.saveCookies()
+    
     # Create a ChatBot
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())  # or cookie_path="usercookies/<email>.json"
 
